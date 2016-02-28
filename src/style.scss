@@ -1,0 +1,54 @@
+@import url(https://fonts.googleapis.com/css?family=Roboto:400,300,500);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+
+$padding: 10px;
+
+body,
+#root {
+	box-sizing: border-box;
+	margin: 0;
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+}
+
+.block-link {
+  display: block;
+  text-decoration: none;
+  color: initial;
+}
+
+.full-screen {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .mini-content {
+    max-width: 400px;
+    padding: 10px;
+  }
+}
+
+.full-width {
+  width: 100%;
+}
+
+.top-right-button-container {
+  position: absolute;
+  top: $padding;
+  right: $padding;
+}
+
+.left-button-container {
+  position: absolute;
+  bottom: $padding;
+  left: $padding;
+}
+
+.right-button-container {
+  position: absolute;
+  bottom: $padding;
+  right: $padding;
+}
