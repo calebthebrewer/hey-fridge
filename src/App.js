@@ -7,8 +7,9 @@ import { syncHistory } from 'redux-simple-router'
 
 import DevTools from './dev-tools'
 import reducer from './reducer'
-import Navigation from './navigation'
+import HeyFridge from './hey-fridge'
 import Listener from './listener'
+import Fridge from './fridge'
 import API from './api'
 
 const history = createHistory()
@@ -19,18 +20,15 @@ const finalCreateStore = compose(
 )(createStore)
 const store = finalCreateStore(reducer)
 
-if (window.localStorage.getItem('breakdown/view/name')) {
-  updateViewName(window.localStorage.getItem('breakdown/view/name'))
-}
-
 export default class App extends Component {
   render() {
     return (
     	<Provider store={ store }>
         <div>
       		<Router history={ history }>
-      			<Route path="/" component={ Navigation }>
+      			<Route path="/" component={ HeyFridge }>
               <IndexRoute component={ Listener }/>
+              <Route path="fridge" component={ Fridge }/>
       			</Route>
       		</Router>
           <DevTools/>

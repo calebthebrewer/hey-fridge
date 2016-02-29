@@ -6,7 +6,7 @@ import ContentAdd from 'material-ui/lib/svg-icons/content/add'
 import AccountSvg from 'material-ui/lib/svg-icons/action/account-circle'
 require('!style!css!sass!./style.scss')
 
-export default class Navigation extends Component {
+export default class HeyFridge extends Component {
 	render() {
 		return (
       <main>

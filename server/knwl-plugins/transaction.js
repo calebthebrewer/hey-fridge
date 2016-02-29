@@ -10,6 +10,7 @@ module.exports = class Transaction {
 
   parseDirection(word) {
     const losses = [
+      'remove',
       'used',
       'lost',
       'expired',
@@ -21,6 +22,7 @@ module.exports = class Transaction {
     ]
 
     const gains = [
+      'add',
       'bought',
       'added',
       'found',
