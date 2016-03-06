@@ -8,7 +8,7 @@ module.exports = class Transaction {
     }
   }
 
-  parseDirection(word) {
+  parseAction(word) {
     const losses = [
       'remove',
       'used',
@@ -30,11 +30,11 @@ module.exports = class Transaction {
     ]
 
     if (losses.indexOf(word) > -1) {
-      return 'loss'
+      return 'remove'
     }
 
     if (gains.indexOf(word) > -1) {
-      return 'gain'
+      return 'add'
     }
 
     return false
@@ -45,10 +45,10 @@ module.exports = class Transaction {
     const results = []
 
     for (let i = 0, l = words.length; i < l; i++) {
-      let direction = this.parseDirection(words[i])
-      if (direction) {
+      let action = this.parseAction(words[i])
+      if (action) {
         results.push({
-          direction,
+          action,
           preview: this.knwl.tasks.preview(i, words),
           found: i
         })

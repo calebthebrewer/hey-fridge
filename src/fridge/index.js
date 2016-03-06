@@ -18,7 +18,22 @@ export default class Fridge extends Component {
   render() {
     return (
       <div>
-        I'm a fridge.
+        <h1>Hey, Fridge!</h1>
+        <h2>A catalog of your food and stuff.</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Food</th>
+              <th>Quantity</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Apples</td>
+              <td>2</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
     )
   }
